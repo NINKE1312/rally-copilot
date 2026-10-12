@@ -1,0 +1,42 @@
+# Rally Copilot
+
+A rally-style driving assistant that turns map directions into quick, loud, high-energy instructions.
+
+## Open it now
+
+This version is designed to work immediately in a browser without a Google Maps API key.
+
+1. Open `index.html` directly in your browser, or
+2. Serve it locally:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then visit:
+
+```text
+http://localhost:8000
+```
+
+## Features
+
+- Rally-inspired turn cues with big numbers and arrows
+- Spoken turn instructions using the browser speech engine
+- Visual route summary and step list
+- Demo route that works immediately
+- Live Google Maps mode when a real API key is added
+
+## Live Google Maps option
+
+To use real map routing:
+
+1. Create a Google Cloud project
+2. Enable the Maps JavaScript API
+3. Add your API key to the page script source if you want to replace the demo view
+4. Reconnect the live route handler in `script.js`
+
+## License
+
+MIT
+

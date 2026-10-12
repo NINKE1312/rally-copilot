@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rally Copilot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand-block">
+          <div class="brand-badge">RC</div>
+          <div>
+            <p class="eyebrow">Co-Pilot</p>
+            <h1>Rally Copilot</h1>
+          </div>
+        </div>
+
+        <form id="route-form" class="route-form">
+          <label>
+            <span>Start</span>
+            <input id="origin" type="text" placeholder="Current location or address" />
+          </label>
+
+          <label>
+            <span>Destination</span>
+            <input id="destination" type="text" placeholder="Where to, driver?" required />
+          </label>
+
+          <div class="actions-row">
+            <button type="submit" class="primary-btn">Start Rally</button>
+            <button type="button" id="voice-toggle" class="secondary-btn" aria-pressed="true">Voice On</button>
+          </div>
+        </form>
+
+        <div class="status-panel">
+          <div class="status-label">Current callout</div>
+          <div id="current-turn" class="turn-hero">
+            <div class="turn-hero__number">00</div>
+            <div class="turn-hero__icon">→</div>
+            <div class="turn-hero__text">Set your route and hit START</div>
+          </div>
+        </div>
+
+        <div class="legend">
+          <div class="legend-item">
+            <span class="legend-dot danger"></span>
+            <span>Critical turn</span>
+          </div>
+          <div class="legend-item">
+            <span class="legend-dot warning"></span>
+            <span>Direction warning</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="map-panel">
+        <div id="map"></div>
+        <div class="route-list-wrap">
+          <div class="route-header">
+            <h2>Turn list</h2>
+            <span id="route-summary">Ready to launch</span>
+          </div>
+          <div id="turn-list" class="turn-list"></div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
